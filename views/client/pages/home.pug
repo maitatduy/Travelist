@@ -1,0 +1,492 @@
+extend ../layouts/default.pug
+include ../mixins/product-item.pug
+
+block main
+    .section-1
+        .container
+            .inner-wrap
+                h1.inner-title(
+                    data-aos-duration="800" 
+                    data-aos="fade-up"
+                )
+                    | Du lịch Châu Á - Khám phá Mỹ, Úc, Âu
+                    br
+                    | Đi nơi đâu bạn muốn
+                p.inner-desc(
+                    data-aos-delay="150" 
+                    data-aos-duration="800" 
+                    data-aos="fade-up"
+                    )
+                    | Chúng tôi mang đến những tour du lịch trọn gói, dịch vụ chuyên nghiệp và trải nghiệm đẳng cấp, giúp bạn tận hưởng hành trình một cách trọn vẹn nhất.
+                form.inner-form(
+                    data-aos-delay="300" 
+                    data-aos-duration="800" 
+                    data-aos="fade-up" 
+                    action="#"
+                    )
+                    .inner-box.inner-address
+                        .inner-input-group
+                            img.inner-icon(src="/assets/images/icon-address.svg")
+                            input.inner-input(
+                                placeholder="Bạn muốn đi đâu?" 
+                                type="text"
+                                )
+                            i.fa-solid.fa-angle-down.inner-down
+                        .inner-suggest
+                            .inner-suggest-title
+                                i.fa-solid.fa-location-dot
+                                | Địa Điểm Hot
+                            .inner-suggest-list
+                                .inner-item
+                                    .inner-item-image
+                                        img(
+                                            alt="" 
+                                            src="/assets/images/product-1.jpg"
+                                            )
+                                    .inner-item-content
+                                        .inner-item-title Nhật Bản
+                                        .inner-item-desc 50 tours
+                                .inner-item
+                                    .inner-item-image
+                                        img(
+                                            alt="" 
+                                            src="/assets/images/product-2.jpg"
+                                            )
+                                    .inner-item-content
+                                        .inner-item-title Phú Quốc
+                                        .inner-item-desc 50 tours
+                                .inner-item
+                                    .inner-item-image
+                                        img(
+                                            alt="" 
+                                            src="/assets/images/product-3.jpg"
+                                            )
+                                    .inner-item-content
+                                        .inner-item-title Singapore
+                                        .inner-item-desc 50 tours
+                    .inner-box.inner-user
+                        .inner-input-group
+                            img.inner-icon(src="/assets/images/icon-user.svg")
+                            input.inner-input(
+                                placeholder="Số lượng" 
+                                type="text"
+                                )
+                            i.fa-solid.fa-angle-down.inner-down
+                        .inner-quantity
+                            .inner-item
+                                .inner-label Người lớn
+                                .inner-count
+                                    span.inner-down -
+                                    span.inner-number 1
+                                    span.inner-up +
+                            .inner-item
+                                .inner-label Trẻ em
+                                .inner-count
+                                    span.inner-down -
+                                    span.inner-number 0
+                                    span.inner-up +
+                            .inner-item
+                                .inner-label Em bé
+                                .inner-count
+                                    span.inner-down -
+                                    span.inner-number 0
+                                    span.inner-up +
+                    .inner-box.inner-calendar
+                        .inner-input-group
+                            img.inner-icon(src="/assets/images/icon-calendar.svg")
+                            input.inner-input(type="date")
+                    button.inner-button(type="submit")
+                        i.fa-solid.fa-magnifying-glass
+                        | Tìm Kiếm
+
+    -
+        var productListSection2 = [
+            {
+                avatar: "/assets/images/product-1.jpg",
+                slug: "#",
+                discount: 20,
+                name: "Hà Nội – Lào Cai – Sa Pa 3N2Đ (Fansipan – Bản Cát Cát)",
+                priceOld: 5890000,
+                priceNew: 4690000,
+                code: "TOUR2025001",
+                departureDate: "2025-12-20",
+                time: "3 Ngày 2 Đêm",
+                ratingStars: 5,
+                ratingTotal: 152,
+                stock: 18
+            },
+            {
+                avatar: "/assets/images/product-2.jpg",
+                slug: "#",
+                discount: 10,
+                name: "Phú Quốc 2025: VinWonders – Grand World – Hòn Thơm 3N2Đ",
+                priceOld: 7200000,
+                priceNew: 6480000,
+                code: "TOUR2025002",
+                departureDate: "2025-12-24",
+                time: "3 Ngày 2 Đêm",
+                ratingStars: 3,
+                ratingTotal: 230,
+                stock: 25
+            },
+            {
+                avatar: "/assets/images/product-3.jpg",
+                slug: "#",
+                discount: 25,
+                name: "Combo Đà Nẵng – Hội An – Bà Nà Hills 4N3Đ",
+                priceOld: 8650000,
+                priceNew: 6490000,
+                code: "TOUR2025003",
+                departureDate: "2025-12-18",
+                time: "4 Ngày 3 Đêm",
+                ratingStars: 4,
+                ratingTotal: 310,
+                stock: 16
+            },
+            {
+                avatar: "/assets/images/product-1.jpg",
+                slug: "#",
+                discount: 30,
+                name: "Tour Miền Tây 2025: Mỹ Tho – Bến Tre – Cần Thơ 2N1Đ",
+                priceOld: 3890000,
+                priceNew: 2790000,
+                code: "TOUR2025004",
+                departureDate: "2025-12-15",
+                time: "2 Ngày 1 Đêm",
+                ratingStars: 4,
+                ratingTotal: 89,
+                stock: 30
+            }
+        ];
+
+    .section-2(
+        data-aos-delay="450" 
+        data-aos-duration="800" 
+        data-aos="fade-up"
+    )
+        .container
+            .inner-wrap
+                .inner-info
+                    h2.inner-title
+                        | ƯU ĐÃI 2025
+                        br
+                        | TOUR GIỜ CHÓT
+                    .inner-desc Ưu đãi hấp dẫn dành riêng cho mùa du lịch 2025!
+                    .inner-clock-title Kết thúc sau
+                    .inner-clock-number(clock-expire="2025-12-10T15:00:00")
+                        span.inner-item
+                            .inner-number 00
+                            .inner-label Ngày
+                        span.inner-item
+                            .inner-number 00
+                            .inner-label Giờ
+                        span.inner-item
+                            .inner-number 00
+                            .inner-label Phút
+                        span.inner-item
+                            .inner-number 00
+                            .inner-label Giây
+                    .inner-discount-title GIẢM ĐẾN
+                    .inner-discount-price
+                        | 990.000
+                        span.inner-unit đ
+                .inner-list
+                    .swiper.swiper-section-2
+                        .swiper-wrapper
+                            each item in productListSection2
+                                .swiper-slide
+                                    // Product Item
+                                    +product-item(item)
+                                    // End Product Item
+
+    .section-3
+        .container
+            h2.box-title(
+                data-aos-duration="800" 
+                data-aos="fade-up"
+                ) Khuyến Mại Bùng Nổ - Đánh Tan Nóng Bức
+            .swiper.swiper-section-3(
+                data-aos-delay="150" 
+                data-aos-duration="800" 
+                data-aos="fade-up"
+                )
+                .swiper-wrapper
+                    .swiper-slide
+                        .inner-item
+                            a(href="#")
+                                img(
+                                    alt="" 
+                                    src="/assets/images/banner-1.png"
+                                    )
+                    .swiper-slide
+                        .inner-item
+                            a(href="#")
+                                img(
+                                    alt="" 
+                                    src="/assets/images/banner-2.png"
+                                    )
+                    .swiper-slide
+                        .inner-item
+                            a(href="#")
+                                img(
+                                    alt="" 
+                                    src="/assets/images/banner-3.png"
+                                    )
+                    .swiper-slide
+                        .inner-item
+                            a(href="#")
+                                img(
+                                    alt="" 
+                                    src="/assets/images/banner-1.png"
+                                    )
+                .swiper-pagination
+    // Section 4
+    -
+        var productListSection4 = [
+            {
+                avatar: "/assets/images/product-1.jpg",
+                slug: "#",
+                discount: 15,
+                name: "Tour Hạ Long 2025: Vịnh Hạ Long – Thiên Đường Nghỉ Dưỡng 3N2Đ",
+                priceOld: 7500000,
+                priceNew: 6375000,
+                code: "TOUR2025005",
+                departureDate: "10/01/2026",
+                time: "3 Ngày 2 Đêm",
+                ratingStars: 4.7,
+                ratingTotal: 188,
+                stock: 25
+            },
+            {
+                avatar: "/assets/images/product-2.jpg",
+                slug: "#",
+                discount: 20,
+                name: "Nha Trang 2025: Vinpearl – Vịnh Ninh Vân – Tứ Đảo 4N3Đ",
+                priceOld: 9200000,
+                priceNew: 7360000,
+                code: "TOUR2025006",
+                departureDate: "15/02/2026",
+                time: "4 Ngày 3 Đêm",
+                ratingStars: 4.9,
+                ratingTotal: 275,
+                stock: 18
+            },
+            {
+                avatar: "/assets/images/product-3.jpg",
+                slug: "#",
+                discount: 35,
+                name: "Đà Lạt 2025: Thành Phố Sương Mù – Hồ Tuyền Lâm – Langbiang 3N2Đ",
+                priceOld: 6800000,
+                priceNew: 4420000,
+                code: "TOUR2025007",
+                departureDate: "05/03/2026",
+                time: "3 Ngày 2 Đêm",
+                ratingStars: 4.3,
+                ratingTotal: 134,
+                stock: 22
+            },
+            {
+                avatar: "/assets/images/product-1.jpg",
+                slug: "#",
+                discount: 10,
+                name: "Huế – Đà Nẵng – Hội An 2025: Di Sản Miền Trung 5N4Đ",
+                priceOld: 11500000,
+                priceNew: 10350000,
+                code: "TOUR2025008",
+                departureDate: "20/01/2026",
+                time: "5 Ngày 4 Đêm",
+                ratingStars: 4.5,
+                ratingTotal: 160,
+                stock: 14
+            }
+        ];
+
+
+    .section-4
+        .container
+            h2.box-title(
+                data-aos-duration="800" 
+                data-aos="fade-up"
+                ) Tour Trong Nước
+            .inner-wrap(
+                data-aos-delay="150" 
+                data-aos-duration="800" 
+                data-aos="fade-up"
+                )
+                each item in productListSection4
+                    // Product Item
+                    +product-item(item)
+                    // End Product Item
+            .inner-button
+                a.button-outline(href="#") Xem tất cả
+    // End Section 4
+
+    // Section 5
+    .section-5(
+        data-aos-duration="800" 
+        data-aos="fade-up"
+        )
+        .container
+            .inner-image
+                a(href="#")
+                    img(
+                        alt="" 
+                        src="/assets/images/banner-4.png"
+                        )
+    // End Section 5
+
+    // Section 6
+    -
+        var productListSection6 = [
+            {
+                avatar: "/assets/images/product-1.jpg",
+                slug: "#",
+                discount: 15,
+                name: "Tour Hạ Long 2025: Vịnh Hạ Long – Thiên Đường Nghỉ Dưỡng 3N2Đ",
+                priceOld: 7500000,
+                priceNew: 6375000,
+                code: "TOUR2025005",
+                departureDate: "10/01/2026",
+                time: "3 Ngày 2 Đêm",
+                ratingStars: 4.7,
+                ratingTotal: 188,
+                stock: 25
+            },
+            {
+                avatar: "/assets/images/product-2.jpg",
+                slug: "#",
+                discount: 20,
+                name: "Nha Trang 2025: Vinpearl – Vịnh Ninh Vân – Tứ Đảo 4N3Đ",
+                priceOld: 9200000,
+                priceNew: 7360000,
+                code: "TOUR2025006",
+                departureDate: "15/02/2026",
+                time: "4 Ngày 3 Đêm",
+                ratingStars: 4.9,
+                ratingTotal: 275,
+                stock: 18
+            },
+            {
+                avatar: "/assets/images/product-3.jpg",
+                slug: "#",
+                discount: 35,
+                name: "Đà Lạt 2025: Thành Phố Sương Mù – Hồ Tuyền Lâm – Langbiang 3N2Đ",
+                priceOld: 6800000,
+                priceNew: 4420000,
+                code: "TOUR2025007",
+                departureDate: "05/03/2026",
+                time: "3 Ngày 2 Đêm",
+                ratingStars: 4.3,
+                ratingTotal: 134,
+                stock: 22
+            },
+            {
+                avatar: "/assets/images/product-1.jpg",
+                slug: "#",
+                discount: 10,
+                name: "Huế – Đà Nẵng – Hội An 2025: Di Sản Miền Trung 5N4Đ",
+                priceOld: 11500000,
+                priceNew: 10350000,
+                code: "TOUR2025008",
+                departureDate: "20/01/2026",
+                time: "5 Ngày 4 Đêm",
+                ratingStars: 4.5,
+                ratingTotal: 160,
+                stock: 14
+            }
+        ];
+
+    .section-4
+        .container
+            h2.box-title(
+                data-aos-duration="800" 
+                data-aos="fade-up"
+                ) Tour Nước Ngoài
+            .inner-wrap(
+                data-aos-delay="150" 
+                data-aos-duration="800" 
+                data-aos="fade-up"
+                )
+                each item in productListSection6
+                    // Product Item
+                    +product-item(item)
+                    // End Product Item
+            .inner-button
+                a.button-outline(href="#") Xem tất cả
+
+    .section-5(
+        data-aos-duration="800" 
+        data-aos="fade-up"
+        )
+        .container
+            .inner-image
+                a(href="#")
+                    img(
+                        alt="" 
+                        src="/assets/images/banner-5.png"
+                        )
+
+    .section-8
+        .container
+            h2.box-title(
+                data-aos-duration="800" 
+                data-aos="fade-up"
+                ) Tin Tức Mới
+            .inner-wrap(
+                data-aos-delay="150" 
+                data-aos-duration="800" 
+                data-aos="fade-up"
+                )
+                .blog-item
+                    a(href="#")
+                        .inner-image
+                            img(
+                                alt="" 
+                                src="/assets/images/blog-1.jpg"
+                                )
+                        .inner-content
+                            .inner-date 23/05/2025
+                            h3.inner-title Homestay “cổ tích” giữa Đà Lạt mộng mơ
+                .blog-item-2
+                    a(href="#")
+                        .inner-image
+                            img(
+                                alt="" 
+                                src="/assets/images/blog-2.jpg"
+                                )
+                        .inner-content
+                            .inner-date 23/05/2025
+                            h3.inner-title Top 5 điểm check in độc đáo tại Singapore
+                            .inner-desc
+                                | Nếu bạn nghĩ du lịch Singapore rất nhàm chán vì chỉ mãi quanh quẩn trong những khối bê tông vô cảm thì bạn “chắc chưa?”. Tuy đảo quốc Sư Tử không phải là một quốc gia rộng lớn nhưng các địa điểm du lịch tại Singapore chưa từng đánh mất sức hút đối với cộng đồng xê dịch quốc tế.
+                .blog-item
+                    a(href="#")
+                        .inner-image
+                            img(
+                                alt="" 
+                                src="/assets/images/blog-3.jpg"
+                                )
+                        .inner-content
+                            .inner-date 23/05/2025
+                            h3.inner-title Đặc sản không thể bỏ qua khi đến với Đà Nẵng - Hội An
+                .blog-item
+                    a(href="#")
+                        .inner-image
+                            img(
+                                alt="" 
+                                src="/assets/images/blog-4.jpg"
+                                )
+                        .inner-content
+                            .inner-date 23/05/2025
+                            h3.inner-title Đảo Phú Quý Bình Thuận hot trend năm 2025
+                .blog-item
+                    a(href="#")
+                        .inner-image
+                            img(
+                                alt="" 
+                                src="/assets/images/blog-5.jpg"
+                                )
+                        .inner-content
+                            .inner-date 23/05/2025
+                            h3.inner-title Trekking cắm trại tại Đà Lạt- Cảm nhận Đà Lạt qua từng bước chân
+
