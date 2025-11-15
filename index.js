@@ -10,6 +10,8 @@ const port = 3000;
 const adminRoutes = require("./routes/admin/index.route");
 const variableConfig = require("./config/variable.config");
 
+const cookieParser = require("cookie-parser");
+
 // Kết nối database
 database.connect();
 
@@ -23,8 +25,14 @@ app.use(express.static(path.join(__dirname, "public")));
 // Tạo biến toàn cục trong file PUG
 app.locals.pathAdmin = variableConfig.pathAdmin;
 
+// Tạo biến toàn cục trong các file Backend
+global.pathAdmin = variableConfig.pathAdmin;
+
 // Cho phép gửi data dạng json
 app.use(express.json());
+
+// Sử dụng cookie-parser
+app.use(cookieParser());
 
 // Thiết lập đường dẫn
 app.use(`/${variableConfig.pathAdmin}`, adminRoutes);
